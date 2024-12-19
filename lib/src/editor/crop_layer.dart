@@ -134,7 +134,7 @@ class ExtendedImageCropLayerState extends State<ExtendedImageCropLayer>
               child: Container(
                 height: gWidth * 2,
                 width: gWidth * 2,
-                child: GestureDetector(
+                child: MouseRegion(cursor: SystemMouseCursors.resizeUpLeft, child: GestureDetector(
                   behavior: HitTestBehavior.translucent,
                   onPanUpdate: (DragUpdateDetails details) {
                     moveUpdate(_MoveType.topLeft, details.delta);
@@ -142,7 +142,7 @@ class ExtendedImageCropLayerState extends State<ExtendedImageCropLayer>
                   onPanEnd: (_) {
                     _moveEnd(_MoveType.topLeft);
                   },
-                ),
+                )),
               ),
             ),
             //top right
@@ -152,7 +152,7 @@ class ExtendedImageCropLayerState extends State<ExtendedImageCropLayer>
               child: Container(
                 height: gWidth * 2,
                 width: gWidth * 2,
-                child: GestureDetector(
+                child: MouseRegion(cursor: SystemMouseCursors.resizeUpLeft, child: GestureDetector(
                   behavior: HitTestBehavior.translucent,
                   onPanUpdate: (DragUpdateDetails details) {
                     moveUpdate(_MoveType.topRight, details.delta);
@@ -160,7 +160,7 @@ class ExtendedImageCropLayerState extends State<ExtendedImageCropLayer>
                   onPanEnd: (_) {
                     _moveEnd(_MoveType.topRight);
                   },
-                ),
+                )),
               ),
             ),
             //bottom left
@@ -170,7 +170,7 @@ class ExtendedImageCropLayerState extends State<ExtendedImageCropLayer>
               child: Container(
                 height: gWidth * 2,
                 width: gWidth * 2,
-                child: GestureDetector(
+                child: MouseRegion(cursor: SystemMouseCursors.resizeUpLeft, child: GestureDetector(
                   behavior: HitTestBehavior.translucent,
                   onPanUpdate: (DragUpdateDetails details) {
                     moveUpdate(_MoveType.bottomLeft, details.delta);
@@ -178,7 +178,7 @@ class ExtendedImageCropLayerState extends State<ExtendedImageCropLayer>
                   onPanEnd: (_) {
                     _moveEnd(_MoveType.bottomLeft);
                   },
-                ),
+                )),
               ),
             ),
             // bottom right
@@ -188,7 +188,7 @@ class ExtendedImageCropLayerState extends State<ExtendedImageCropLayer>
               child: Container(
                 height: gWidth * 2,
                 width: gWidth * 2,
-                child: GestureDetector(
+                child: MouseRegion(cursor: SystemMouseCursors.resizeUpLeft, child: GestureDetector(
                   behavior: HitTestBehavior.translucent,
                   onPanUpdate: (DragUpdateDetails details) {
                     moveUpdate(_MoveType.bottomRight, details.delta);
@@ -196,7 +196,7 @@ class ExtendedImageCropLayerState extends State<ExtendedImageCropLayer>
                   onPanEnd: (_) {
                     _moveEnd(_MoveType.bottomRight);
                   },
-                ),
+                )),
               ),
             ),
             // top
@@ -206,7 +206,7 @@ class ExtendedImageCropLayerState extends State<ExtendedImageCropLayer>
               child: Container(
                 height: gWidth * 2,
                 width: max(cropRect!.width - gWidth * 2, gWidth * 2),
-                child: GestureDetector(
+                child: MouseRegion(cursor: SystemMouseCursors.resizeUpLeft, child: GestureDetector(
                   behavior: HitTestBehavior.translucent,
                   onVerticalDragUpdate: (DragUpdateDetails details) {
                     moveUpdate(_MoveType.top, details.delta);
@@ -214,7 +214,7 @@ class ExtendedImageCropLayerState extends State<ExtendedImageCropLayer>
                   onVerticalDragEnd: (_) {
                     _moveEnd(_MoveType.top);
                   },
-                ),
+                )),
               ),
             ),
             //left
@@ -224,7 +224,7 @@ class ExtendedImageCropLayerState extends State<ExtendedImageCropLayer>
               child: Container(
                 height: max(cropRect!.height - gWidth * 2, gWidth * 2),
                 width: gWidth * 2,
-                child: GestureDetector(
+                child: MouseRegion(cursor: SystemMouseCursors.resizeUpLeft, child: GestureDetector(
                   behavior: HitTestBehavior.translucent,
                   onHorizontalDragUpdate: (DragUpdateDetails details) {
                     moveUpdate(_MoveType.left, details.delta);
@@ -232,7 +232,7 @@ class ExtendedImageCropLayerState extends State<ExtendedImageCropLayer>
                   onHorizontalDragEnd: (_) {
                     _moveEnd(_MoveType.left);
                   },
-                ),
+                )),
               ),
             ),
             //bottom
@@ -242,7 +242,7 @@ class ExtendedImageCropLayerState extends State<ExtendedImageCropLayer>
               child: Container(
                 height: gWidth * 2,
                 width: max(cropRect!.width - gWidth * 2, gWidth * 2),
-                child: GestureDetector(
+                child: MouseRegion(cursor: SystemMouseCursors.resizeUpLeft, child: GestureDetector(
                   behavior: HitTestBehavior.translucent,
                   onVerticalDragUpdate: (DragUpdateDetails details) {
                     moveUpdate(_MoveType.bottom, details.delta);
@@ -250,7 +250,7 @@ class ExtendedImageCropLayerState extends State<ExtendedImageCropLayer>
                   onVerticalDragEnd: (_) {
                     _moveEnd(_MoveType.bottom);
                   },
-                ),
+                )),
               ),
             ),
             //right
@@ -260,7 +260,7 @@ class ExtendedImageCropLayerState extends State<ExtendedImageCropLayer>
               child: Container(
                 height: max(cropRect!.height - gWidth * 2, gWidth * 2),
                 width: gWidth * 2,
-                child: GestureDetector(
+                child: MouseRegion(cursor: SystemMouseCursors.resizeUpLeft, child: GestureDetector(
                   behavior: HitTestBehavior.translucent,
                   onHorizontalDragUpdate: (DragUpdateDetails details) {
                     moveUpdate(_MoveType.right, details.delta);
@@ -268,7 +268,7 @@ class ExtendedImageCropLayerState extends State<ExtendedImageCropLayer>
                   onHorizontalDragEnd: (_) {
                     _moveEnd(_MoveType.right);
                   },
-                ),
+                )),
               ),
             ),
           ],
